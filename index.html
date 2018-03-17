@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+        <title>NotaFinal</title>
+    
+    
+ 
+<script>
+function notas(){
+    var res=0;
+    text1= document.getElementById("nombre").value;
+    
+    
+    
+    
+	na1 = document.getElementById("nota1").value;
+	na2 = document.getElementById("nota2").value;
+	na3 = document.getElementById("nota3").value;
+    res = (na1*0.35)+(na2*0.35)+(na3*0.30);
+	document.getElementById("resultado").value = res;
+    
+	if (res>=3.0) {
+
+	document.getElementById("paso").value= "aprobo";
+
+
+			}else{
+
+	document.getElementById("paso").value= "reprobo";
+				  }
+
+    if (res=4.0 && 4.5) {
+
+	document.getElementById("bc").value= "obtuvo beca del 60%";
+
+
+			}else{
+
+	document.getElementById("bc").value= "no obtuvo beca";
+				  }
+
+	if (res>=4.6) {
+
+	document.getElementById("bc").value= "obtuvo beca del 90%";
+
+
+			}else{
+
+	document.getElementById("bc").value= "no obtuvo beca";
+				  }
+
+}
+    
+    
+
+</script>
+</head>
+<body>
+
+<h1>NOTA FINAL</h1>
+
+<form id="notas">
+
+  NOMBRE DEL ESTUDIANTE <input type="text" id="nombre" onChange="notas();">    
+  <p>NOTA1 <input type="text" id="nota1" value=0 onChange="notas();"> 
+  <p>NOTA2<input type="text" id="nota2" value=0 onChange="notas();"> 
+  <p>NOTA3<input type="text" id="nota3" value=0 onChange="notas();"> 
+  RESULTADO<input type="text" id="resultado">
+  paso?<input type="text" id="paso">
+  becado?<input type="text" id="bc">
+
+<p></p>
+    
+  
+
+</form>
+
+<br><br>
+
+
+
+
+</body>
+</html>
